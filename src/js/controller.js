@@ -8,9 +8,9 @@ import 'regenerator-runtime/runtime';
 import recipeView from './views/recipeView.js';
 import { async } from 'regenerator-runtime';
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 const controlRecipe = async function () {
   try {
@@ -42,7 +42,7 @@ const controlSearchResults = async function () {
 
     // Render Search Results
     console.log(model.state.search.results);
-    resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPage(1));
   } catch (err) {
     console.log(err);
   }
