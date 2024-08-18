@@ -22,7 +22,6 @@ export default class view {
 
     newElement.forEach((newEl, i) => {
       const curEl = curElelment[i];
-      console.log(curEl, newEl.isEqualNode(curEl));
 
       if (
         !newEl.isEqualNode(curEl) &&
